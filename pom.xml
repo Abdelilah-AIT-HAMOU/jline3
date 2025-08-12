@@ -13,7 +13,7 @@
 
     <groupId>org.jline</groupId>
     <artifactId>jline-parent</artifactId>
-    <version>${nisse.jgit.dynamicVersion}</version>
+    <version>3.30.4</version>
     <packaging>pom</packaging>
     <name>JLine</name>
     <description>JLine</description>
