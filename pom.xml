@@ -11,6 +11,7 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
 
+    <modelVersion>4.0.0</modelVersion>
     <groupId>org.jline</groupId>
     <artifactId>jline-parent</artifactId>
     <version>${nisse.jgit.dynamicVersion}</version>
@@ -47,6 +48,26 @@
             <archive>https://groups.google.com/group/jline-users</archive>
         </mailingList>
     </mailingLists>
+
+    <modules>
+        <module>native</module>
+        <module>terminal</module>
+        <module>terminal-ffm</module>
+        <module>terminal-jni</module>
+        <module>reader</module>
+        <module>builtins</module>
+        <module>console-ui</module>
+        <module>prompt</module>
+        <module>console</module>
+        <module>groovy</module>
+        <module>remote-ssh</module>
+        <module>remote-telnet</module>
+        <module>style</module>
+        <module>curses</module>
+        <module>demo</module>
+        <module>graal</module>
+        <module>jansi-core</module>
+    </modules>
 
     <scm>
         <connection>scm:git:https://github.com/jline/jline3.git</connection>
@@ -613,6 +634,10 @@
                     <name>!nobundle</name>
                 </property>
             </activation>
+            <modules>
+                <module>jline</module>
+                <module>jansi</module>
+            </modules>
             <build>
                 <plugins>
                     <plugin>
@@ -629,10 +654,6 @@
                     </plugin>
                 </plugins>
             </build>
-            <subprojects>
-                <subproject>jline</subproject>
-                <subproject>jansi</subproject>
-            </subprojects>
         </profile>
 
         <profile>
@@ -719,25 +740,5 @@
             </build>
         </profile>
     </profiles>
-
-    <subprojects>
-        <subproject>native</subproject>
-        <subproject>terminal</subproject>
-        <subproject>terminal-ffm</subproject>
-        <subproject>terminal-jni</subproject>
-        <subproject>reader</subproject>
-        <subproject>builtins</subproject>
-        <subproject>console-ui</subproject>
-        <subproject>prompt</subproject>
-        <subproject>console</subproject>
-        <subproject>groovy</subproject>
-        <subproject>remote-ssh</subproject>
-        <subproject>remote-telnet</subproject>
-        <subproject>style</subproject>
-        <subproject>curses</subproject>
-        <subproject>demo</subproject>
-        <subproject>graal</subproject>
-        <subproject>jansi-core</subproject>
-    </subprojects>
 
 </project>
